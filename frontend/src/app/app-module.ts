@@ -14,11 +14,11 @@ import {MatFormFieldHarness} from '@angular/material/form-field/testing';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
-
+import { provideHttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [App, Navbar, Footer, Signup, Login],
-  imports: [BrowserModule,FormsModule, AppRoutingModule, MatButtonModule, MatSelectModule, MatIconModule, MatInputModule, MatFormFieldModule],
-  providers: [provideBrowserGlobalErrorListeners()],
+  imports: [BrowserModule ,FormsModule, AppRoutingModule, MatButtonModule, MatSelectModule, MatIconModule, MatInputModule, MatFormFieldModule],
+  providers: [ provideHttpClient()],
   bootstrap: [App],
 })
 export class AppModule {}
