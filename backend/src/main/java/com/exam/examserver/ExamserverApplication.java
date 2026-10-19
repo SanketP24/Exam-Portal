@@ -23,7 +23,7 @@ public class ExamserverApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("starting code");
-
+/*
         User user= new User();
         user.setFirstName("Sanket");
         user.setLastName("Peddapuli");
@@ -45,6 +45,6 @@ public class ExamserverApplication implements CommandLineRunner {
 
         System.out.print(user1.getUsername());
 
-
+*/
     }
 }

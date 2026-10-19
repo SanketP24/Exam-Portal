@@ -4,6 +4,7 @@ import com.exam.examserver.model.Role;
 import com.exam.examserver.model.User;
 import com.exam.examserver.model.UserRole;
 import com.exam.examserver.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
@@ -12,6 +13,7 @@ import java.util.Set;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+    @Autowired
     private UserService userService;
     @PostMapping("/")
    public User createUser(@RequestBody User user) throws Exception {
@@ -24,7 +26,7 @@ public class UserController {
         UserRole userRole = new UserRole();
         userRole.setUser(user);
         userRole.setRole(role);
-        roles.add(new UserRole());
+        roles.add(userRole);
 
         return this.userService.createUser(user, roles );
 
