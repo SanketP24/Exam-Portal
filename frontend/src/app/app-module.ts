@@ -12,10 +12,12 @@ import { Login } from './pages/login/login';
 import {MatFormField, MatInputModule} from '@angular/material/input';
 import {MatFormFieldHarness} from '@angular/material/form-field/testing';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [App, Navbar, Footer, Signup, Login],
-  imports: [BrowserModule, AppRoutingModule, MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule],
+  imports: [BrowserModule,FormsModule, AppRoutingModule, MatButtonModule, MatSelectModule, MatIconModule, MatInputModule, MatFormFieldModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
